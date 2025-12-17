@@ -83,7 +83,8 @@ const loopAnim = () => {
   loopCount++
   startAnim(() => {
     const isTruely = typeof props.loop === 'boolean' && props.loop
-    if (isTruely || props.loop > loopCount) {
+    const isLoopCount = typeof props.loop === 'number' && props.loop > loopCount
+    if (isTruely || isLoopCount) {
       delay(() => {
         countUp.value?.reset()
         loopAnim()

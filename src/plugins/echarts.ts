@@ -1,4 +1,3 @@
-// vue-echarts
 import ECharts from 'vue-echarts'
 import { use } from "echarts/core"
 import {
@@ -17,6 +16,7 @@ import {
     GeoComponent,
     MarkPointComponent
   } from 'echarts/components'
+  import 'echarts-extension-amap';
 
   use([
     CanvasRenderer,
